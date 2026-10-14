@@ -83,8 +83,12 @@ def reset_world():
     world += team
 
     global zombie
-    zombie = [Zombie() for i in range(11)]# Zombie클래스를 이용하여 객체 11개 생성
+    zombie = [Zombie() for i in range(1)]# Zombie클래스를 이용하여 객체 11개 생성
     world += zombie
+
+    global ball
+    ball = [Ball() for i in range(20)]# Ball클래스를 이용하여 객체 20개 생성
+    world += ball
 
 
 
