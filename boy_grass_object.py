@@ -57,7 +57,7 @@ class Ball:
             self.image = load_asset('ball41x41.png')
 
     def update(self):
-        self.y += 5
+        self.y += random.randint(1, 5)
     
     def draw(self):
         if self.type == 0:
