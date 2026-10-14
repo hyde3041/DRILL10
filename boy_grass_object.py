@@ -48,8 +48,9 @@ class Zombie:
 
 class Ball:
     def __init__(self):
-        self.x, self.y = 100, 570
+        self.x, self.y = random.randint(0, 800), 570
         self.type = random.randint(0, 1)
+        self.frame = 0
         if self.type == 0:
             self.image = load_asset('ball21x21.png')
         else:
@@ -61,7 +62,7 @@ class Ball:
         if self.type == 0:
             self.image.draw(21, 21)
         else:
-            self.image.draw(41, 41)
+            self.image.draw(144, 41)
 
 def handle_events():
     global running
