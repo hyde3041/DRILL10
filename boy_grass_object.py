@@ -55,14 +55,15 @@ class Ball:
             self.image = load_asset('ball21x21.png')
         else:
             self.image = load_asset('ball41x41.png')
+
     def update(self):
         pass
     
     def draw(self):
         if self.type == 0:
-            self.image.draw(21, 21)
+            self.image.draw(self.x, self.y)
         else:
-            self.image.draw(144, 41)
+            self.image.draw(self.x, self.y)
 
 def handle_events():
     global running
