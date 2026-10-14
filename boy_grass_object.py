@@ -48,11 +48,14 @@ class Zombie:
 
 class Ball:
     def __init__(self):
+        self.x, self.y = 100, 570
         self.image = load_asset('ball21x21.png')
+
     def update(self):
         pass
+    
     def draw(self):
-        pass
+        self.image.draw(21, 21)
 
 
 def handle_events():
