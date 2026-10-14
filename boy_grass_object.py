@@ -58,8 +58,9 @@ class Ball:
             self.image = load_asset('ball41x41.png')
 
     def update(self):
-        self.y += self.speed
-        if self.y + self.speed > 600:
+        if self.y + self.speed < 600:
+            self.y += self.speed
+        else:
             self.y -= self.speed
     
     def draw(self):
