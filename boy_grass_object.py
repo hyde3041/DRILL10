@@ -50,14 +50,18 @@ class Ball:
     def __init__(self):
         self.x, self.y = 100, 570
         self.type = random.randint(0, 1)
-        self.image = load_asset('ball21x21.png')
-
+        if self.type == 0:
+            self.image = load_asset('ball21x21.png')
+        else:
+            self.image = load_asset('ball41x41.png')
     def update(self):
         pass
     
     def draw(self):
-        self.image.draw(21, 21)
-
+        if self.type == 0:
+            self.image.draw(21, 21)
+        else:
+            self.image.draw(41, 41)
 
 def handle_events():
     global running
